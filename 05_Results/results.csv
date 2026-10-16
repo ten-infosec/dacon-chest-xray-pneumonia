@@ -1,0 +1,8 @@
+exp,desc,val_acc,val_auc,val_sens,val_spec,val_f1,val_fn,val_fp,test_normal_ratio,test_prob_median,crop,clahe,aug,weighted,freeze,lr,epochs,best_epoch,minutes,sched
+E0,Baseline SimpleCNN 128,0.9454,0.9832,0.9433,0.9515,0.9625,44,13,0.497,0.503,,,,,,,,,,
+E1a,ResNet18 224 freeze(fc only),0.9646,0.9944,0.9871,0.8993,0.9764,10,27,0.471,0.592,False,False,False,False,fc,0.001,5.0,5.0,1.2,
+E1b,ResNet18 224 full fine-tuning,0.9799,0.9979,0.9768,0.9888,0.9863,18,3,0.386,0.982,False,False,False,False,full,0.0001,5.0,5.0,1.8,
+E2,E1b + Crop,0.9875,0.9988,0.9858,0.9925,0.9916,11,2,0.284,1.0,True,False,False,False,full,0.0001,5.0,5.0,1.9,
+E2b,E1b + Crop + fixed ratio 1.3,0.9713,0.9967,0.9691,0.9776,0.9804,24,6,0.296,0.998,True,False,False,False,full,0.0001,5.0,3.0,1.9,
+E4,E1b + weighted loss,0.9684,0.9984,0.9601,0.9925,0.9783,31,2,0.388,0.96,False,False,False,True,full,0.0001,5.0,3.0,1.8,
+E5,E1b + cosine LR scheduler,0.9885,0.9983,0.9884,0.9888,0.9922,9,3,0.341,0.989,False,False,False,False,full,0.0001,5.0,4.0,1.8,cosine

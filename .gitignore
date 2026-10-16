@@ -1,0 +1,19 @@
+# Competition data (must not be redistributed)
+*.zip
+train/
+test/
+data/
+
+# Trained model weights
+*.pth
+*.pt
+
+# Third-party documents (papers, course materials)
+*.pdf
+
+# OS / editor / notebook temp files
+.DS_Store
+Thumbs.db
+desktop.ini
+.ipynb_checkpoints/
+__pycache__/
